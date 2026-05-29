@@ -1,0 +1,605 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* ========================================
+   RESET
+======================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#0f1115;
+    color:white;
+    overflow-x:hidden;
+}
+
+/* ========================================
+   GLOBAL
+======================================== */
+
+a{
+    text-decoration:none;
+}
+
+img{
+    width:100%;
+    display:block;
+}
+
+/* ========================================
+   HEADER
+======================================== */
+
+.header{
+    position:sticky;
+    top:0;
+    z-index:1000;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:20px 10%;
+
+    background:rgba(17,21,27,.9);
+
+    backdrop-filter:blur(10px);
+
+    border-bottom:1px solid #1f2630;
+}
+
+/* LOGO */
+
+.logo img{
+    width:300px;
+    height:auto;
+}
+.avatar{
+    margin-left: auto;
+
+}
+.avatar img{
+    width: 90px;
+    height: auto;
+    border-radius: 12px;
+    border: 2px solid rgba(255, 140n, 0,.4);
+}
+
+/* NAVBAR */
+
+.navbar{
+    display:flex;
+    gap:20px;
+}
+
+.navbar a{
+    color:#d4d4d4;
+    text-decoration: none;
+    margin-left: 30px;
+    font-size:1rem;
+    font-weight:bold;
+
+    transition:0.3s;
+}
+
+.navbar a:hover{
+    color:#ff6b00;
+}
+
+/* ========================================
+   HERO
+======================================== */
+
+.hero{
+    min-height:90vh;
+
+    display:flex;
+    align-items:center;
+
+    padding:0 8%;
+
+    background:
+    linear-gradient(rgba(0,0,0,.75),rgba(0,0,0,.8)),
+    url('https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1600');
+
+    background-size:cover;
+    background-position:center;
+}
+
+.hero-content{
+    max-width:700px;
+}
+
+.hero h1{
+    font-size:4.2rem;
+    line-height:1.1;
+    margin-bottom:20px;
+}
+
+.hero p{
+    color:#c0c0c0;
+    font-size:1.1rem;
+    line-height:1.8;
+    margin-bottom:35px;
+}
+
+/* BUTTONS */
+
+.hero-buttons{
+    display:flex;
+    gap:20px;
+}
+
+.btn-primary,
+.btn-secondary{
+    padding:15px 35px;
+
+    border-radius:10px;
+
+    font-weight:600;
+    font-size:1rem;
+
+    transition:.3s;
+}
+
+/* PRIMARY BUTTON */
+
+.btn-primary{
+    background:#ff6b00;
+    color:white;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+.btn-primary:hover{
+    background:#ff8533;
+    transform:translateY(-3px);
+}
+
+/* SECONDARY BUTTON */
+
+.btn-secondary{
+    border:1px solid #444;
+    color:white;
+}
+
+.btn-secondary:hover{
+    border-color:#ff6b00;
+    color:#ff6b00;
+    transform:translateY(-3px);
+}
+
+/* ========================================
+   SERVICES
+======================================== */
+
+.services{
+    padding:100px 8%;
+}
+
+.services h2{
+    text-align:center;
+    font-size:3rem;
+    margin-bottom:70px;
+}
+
+/* GRID */
+
+.services-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:30px;
+}
+
+/* CARD */
+
+.service-card{
+    background: rgba(255, 255, 255, 0.03);
+
+    padding: 30px;
+
+    border-radius:15px;
+
+    border:2px solid rgba(255, 140, 0, 0.3);
+
+    box-shadow:0 10px 30px rgba(0,0,0,.3);
+
+    transition: 0.3s;
+    padding-bottom: 50px;
+}
+
+.service-card:hover{
+    transform:translateY(-5px);
+    box-shadow: 0 0 20px rgba(255, 140, 0, 0.5);
+    border-color:#ff6b00;
+}
+
+/* ICON */
+
+.service-card i{
+    font-size:3rem;
+    color:#ff6b00;
+    margin-bottom:20px;
+}
+
+/* TITLE */
+
+.service-card h3{
+    margin-bottom:15px;
+    font-size:1.5rem;
+}
+
+/* TEXT */
+
+.service-card p{
+    color:#b0b0b0;
+    line-height:1.8;
+}
+
+/* ========================================
+   LOCATION
+======================================== */
+
+.location{
+    padding:100px 8%;
+}
+
+/* BOX */
+
+.location-box{
+    background:#171c24;
+
+    padding:70px;
+
+    border-radius:20px;
+
+    text-align:center;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.3);
+}
+
+.location-box h2{
+    font-size:3rem;
+    margin-bottom:20px;
+}
+
+.location-box p{
+    color:#c0c0c0;
+    line-height:1.9;
+    font-size:1.1rem;
+    margin-bottom:20px;
+}
+.location-box img{
+    width: 250px;
+    max-width: 90%;
+    border-radius: 20px;
+}
+
+/* ========================================
+   tecnical
+======================================== */
+.tecnical{
+    padding: 80px 20%;
+    text-align:center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-top:1px solid #1f2630;
+    background:#11151b;
+    gap: 25px;
+}
+
+.tecnical img{
+width: 600px;
+margin-bottom: 30px;
+max-width: 90%;
+border-radius: 20px;
+box-shadow: 0 0 25px rgba(255,180,71,0.25);
+}
+
+.tecnical h2{
+    color:#ff6b00;
+    font-size:2rem;
+    margin-bottom:15px;
+}
+.tecnical p {
+    color:#b0b0b0;
+    margin-bottom:15px;
+}
+.tecnical span{
+    color:#777;
+    font-size:.9rem;
+}
+
+.footer{
+    padding:50px 8%;
+
+    text-align:center;
+
+    border-top:1px solid #1f2630;
+
+    background:#11151b;
+}
+
+.footer h3{
+    color:#ff6b00;
+    font-size:2rem;
+    margin-bottom:15px;
+}
+
+.footer p{
+    color:#b0b0b0;
+    margin-bottom:15px;
+}
+
+.footer span{
+    color:#777;
+    font-size:.9rem;
+}
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media(max-width:992px){
+
+    .hero h1{
+        font-size:3.2rem;
+    }
+
+}
+
+@media(max-width:768px){
+
+    /* HEADER */
+
+    .header{
+        flex-direction:column;
+        gap:20px;
+    }
+
+    /* NAVBAR */
+
+    .navbar{
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:20px;
+    }
+
+    /* HERO */
+
+    .hero{
+        text-align:center;
+        justify-content:center;
+    }
+
+    .hero h1{
+        font-size:2.5rem;
+    }
+
+    .hero p{
+        font-size:1rem;
+    }
+
+    /* BUTTONS */
+
+    .hero-buttons{
+        flex-direction:column;
+    }
+
+    /* LOCATION */
+
+    .location-box{
+        padding:40px 20px;
+    }
+
+    .location-box h2{
+        font-size:2rem;
+    }
+
+    /* SERVICES */
+
+    .services h2{
+        font-size:2.3rem;
+    }
+
+}
+
+@media(max-width:480px){
+
+    .hero h1{
+        font-size:2rem;
+    }
+
+    .btn-primary,
+    .btn-secondary{
+        width:100%;
+        text-align:center;
+    }
+
+    .logo img{
+        width:110px;
+    }
+
+}
+/* ========================= /
+/ REPUESTOS /
+/ ========================= */
+
+.repuestos-page{
+padding: 140px 10%;
+background: #0b0f1a;
+min-height: 100vh;
+}
+
+.repuestos-text{
+color: #ccc;
+margin-top: 20px;
+margin-bottom: 50px;
+max-width: 700px;
+}
+
+.repuestos-grid{
+display: flex;
+flex-direction: column;
+grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+gap: 20px;
+}
+
+.repuestos-card{
+background: #151c2c;
+border: 1px solid rgba(255,255,255,0.1);
+border-radius: 15px;
+padding: 25px;
+transition: 0.3s;
+display: flex;
+align-items: flex-start;
+gap: 30px;
+text-align: left;
+overflow: hidden;
+}
+
+.repuestos-card div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    padding-left: 20px;
+}
+.repuestos-card:hover{
+transform: translateY(-8px);
+border-color: orange;
+box-shadow: 0 0 20px rgba(255,165,0,0.4);
+}
+
+.repuestos-card img{
+width: 160px;
+height: 160px;
+object-fit: cover;
+margin-bottom: 20px;
+}
+
+.repuestos-card h3{
+color: orange;
+margin-bottom: 15px;
+font-size: 28px;
+}
+
+.repuestos-card p{
+color: #ccc;
+font-size: 18px;
+line-height: 1.5;
+margin-top: 10px;
+}
+.contactos{
+    padding:80px 10%;
+    text-align:center;
+}
+
+.contactos h2{
+    color:orange;
+    margin-bottom:40px;
+}
+
+.contacto-card{
+    background:#151c2c;
+    padding:20px;
+    margin:15px auto;
+    border-radius:12px;
+    max-width:500px;
+    border:1px solid rgba(255,165,0,.3);
+}
+
+.contacto-card h3{
+    color:white;
+    margin-bottom:10px;
+}
+
+.contacto-card p{
+    color:#ccc;
+}
+
+.repuestos-extra{
+    margin-top: 80px;
+    background: #151c2c;
+    border-radius: 20px;
+    padding: 60px 40px;
+    text-align: center;
+    border: 1px solid rgba(255,165,0,.2);
+}
+.repuestos-extra h2{
+    font-size: 40px;
+    color: orange;
+    margin-bottom: 20px;
+}
+.repuestos-extra{
+    color: #ccc;
+    font-size: 18px;
+    max-width: 700px;
+    margin: auto;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+/* =========================
+   CTA REPUESTOS
+========================= */
+
+.cta-repuestos{
+    margin-top: 60px;
+    background: #151c2c;
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 20px;
+    padding: 60px 40px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cta-repuestos h2{
+    color: orange;
+    font-size: 48px;
+    margin-bottom: 25px;
+}
+
+.cta-repuestos p{
+    color: #ccc;
+    font-size: 22px;
+    line-height: 1.7;
+
+    max-width: 800px;
+    margin: 0 auto 60px auto;
+}
+
+/* BOTON */
+
+.cta-repuestos .btn-primary{
+    display: inline-block;
+    margin-top:  30px;
+}
+
+/* FOOTER */
+
+.footer{
+    text-align: center;
+    margin-top: 50px;
+    padding-bottom: 30px;
+}
+
+.footer p{
+    font-size: 14px;
+    color: #999;
+}
+.preview-text .btn-primary{
+    display: inline-block;
+    margin-top: 25px;
+}
