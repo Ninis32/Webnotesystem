@@ -3,181 +3,254 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Repuestos Notebook | NOTESYSTEM Santiago Centro</title>
+  <meta name="description" content="Repuestos para notebook en Santiago Centro: SSD, RAM, baterías, pantallas, teclados y cargadores. NOTESYSTEM Placer 663.">
 
-  <title>NOTESYSTEM</title>
+  <!-- ✅ Favicon (logo en la pestaña) -->
+  <link rel="icon" type="image/png" href="img/1.png">
 
   <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-  <link
-    href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css"
-    rel="stylesheet"
-  >
+  <style>
+    /* ===== FIXES MÓVIL REPUESTOS ===== */
+
+    .repuestos-page {
+      padding: 2rem 1rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .pixel-title {
+      text-align: center;
+      font-size: clamp(1.5rem, 5vw, 2.5rem); /* escala según pantalla */
+      margin-bottom: 0.5rem;
+    }
+
+    .repuestos-text {
+      text-align: center;
+      font-size: clamp(0.9rem, 3vw, 1.1rem);
+      margin-bottom: 2rem;
+      padding: 0 0.5rem;
+    }
+
+    .repuestos-grid {
+      display: grid;
+      /* En móvil: 1 columna. En tablet+: 2 col. En desktop: 3 col */
+      grid-template-columns: 1fr;
+      gap: 1.2rem;
+    }
+
+    @media (min-width: 600px) {
+      .repuestos-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (min-width: 900px) {
+      .repuestos-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .repuestos-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      background: var(--card-bg, #1a1a2e);
+      border-radius: 12px;
+      padding: 1.2rem;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.3);
+    }
+
+    .repuestos-card img {
+      width: 100%;
+      max-width: 180px;
+      height: auto;         /* ✅ nunca se corta */
+      object-fit: contain;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+    }
+
+    .repuestos-card h3 {
+      font-size: 1rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .repuestos-card p {
+      font-size: 0.88rem;
+      line-height: 1.5;
+    }
+
+    /* CTA */
+    .cta-repuestos {
+      grid-column: 1 / -1; /* ocupa todo el ancho del grid */
+      text-align: center;
+      padding: 2rem 1rem;
+      margin-top: 1rem;
+    }
+
+    .cta-repuestos h2 {
+      font-size: clamp(1.1rem, 4vw, 1.6rem);
+      margin-bottom: 0.8rem;
+    }
+
+    .cta-repuestos p {
+      font-size: 0.95rem;
+      max-width: 600px;
+      margin: 0 auto 1.2rem;
+      line-height: 1.6;
+    }
+
+    .btn-primary {
+      display: inline-block;
+      padding: 0.7rem 1.6rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 1.2rem;
+      margin-top: 2rem;
+      font-size: 0.85rem;
+      opacity: 0.7;
+    }
+
+    /* ===== NAVBAR MÓVIL ===== */
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.8rem 1rem;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .logo img {
+      height: 48px;
+      width: auto;
+    }
+
+    .navbar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem 1rem;
+    }
+
+    .navbar a {
+      font-size: 0.95rem;
+      text-decoration: none;
+    }
+
+    @media (max-width: 480px) {
+      .navbar {
+        justify-content: center;
+        width: 100%;
+      }
+    }
+  </style>
 </head>
 
 <body>
- <header class="header">
 
+  <header class="header">
     <div class="logo">
-  <img src="img/1.png" alt="logo">
-</div>
-
+      <img src="img/1.png" alt="NOTESYSTEM logo">
+    </div>
     <nav class="navbar">
-      <a href="/">Inicio</a>
-      <a href="/servicios.html">Servicios</a>
-      <a href="/repuestos.html">Repuestos</a>
-      <a href="#contactos">Contacto</a>
+      <a href="index.html">Inicio</a>
+      <a href="servicios.html">Servicios</a>
+      <a href="repuestos.html">Repuestos</a>
+      <a href="index.html#contactos">Contacto</a>
     </nav>
-
   </header>
 
+  <section class="repuestos-page">
 
-<section class="repuestos-page">
-
-    <h1 class="pixel-title">
-        Repuestos y Upgrades
-    </h1>
+    <h1 class="pixel-title">Repuestos y Upgrades</h1>
 
     <p class="repuestos-text">
-        Especialistas en repuestos para notebooks,
-        equipos de alto rendimiento y computadores corporativos.
+      Especialistas en repuestos para notebooks,
+      equipos de alto rendimiento y computadores corporativos.
     </p>
 
-    <div class="repuestos-grid"></div>
+    <div class="repuestos-grid">
 
-
-        <!-- SSD -->
-
-        <div class="repuestos-card">
-
-            <img src="img/ss.png" alt="repuestos">
-
-            <div>
-
-                <h3>Instalación de SSD y NVME</h3>
-
-                <p>
-                    Kingston, Samsung, WD, Crucial y más.
-                    Mejora el rendimiento de tu notebook.
-                </p>
-
-            </div>
-
+      <!-- SSD -->
+      <div class="repuestos-card">
+        <img src="img/ss.png" alt="SSD y NVME">
+        <div>
+          <h3>Instalación de SSD y NVME</h3>
+          <p>Kingston, Samsung, WD, Crucial y más. Mejora el rendimiento de tu notebook.</p>
         </div>
+      </div>
 
-
-        <!-- RAM -->
-
-        <div class="repuestos-card">
-
-            <img src="img/2.png" alt="RAM">
-
-            <div>
-
-                <h3>Memorias RAM</h3>
-
-                <p>
-                    DDR2, DDR3, DDR4 para notebook y PC gamer.
-                </p>
-
-            </div>
-
+      <!-- RAM -->
+      <div class="repuestos-card">
+        <img src="img/2.png" alt="Memorias RAM">
+        <div>
+          <h3>Memorias RAM</h3>
+          <p>DDR2, DDR3, DDR4 para notebook y PC gamer.</p>
         </div>
+      </div>
 
-
-        <!-- BATERIAS -->
-
-        <div class="repuestos-card">
-
-            <img src="img/bat.png" alt="Baterias">
-
-            <div>
-
-                <h3>Baterías Notebook</h3>
-
-                <p>
-                    Baterías originales y compatibles
-                    para múltiples marcas.
-                </p>
-
-            </div>
-
+      <!-- BATERÍAS -->
+      <div class="repuestos-card">
+        <img src="img/bat.png" alt="Baterías Notebook">
+        <div>
+          <h3>Baterías Notebook</h3>
+          <p>Baterías originales y compatibles para múltiples marcas.</p>
         </div>
+      </div>
 
-
-        <!-- PANTALLAS -->
-
-        <div class="repuestos-card">
-
-            <img src="img/3.png" alt="Pantallas">
-
-            <div>
-
-                <h3>Pantallas LED, Slim y Nano</h3>
-
-                <p>
-                    Reemplazo de pantallas dañadas,
-                    Full HD y Gamer.
-                </p>
-
-            </div>
-
+      <!-- PANTALLAS -->
+      <div class="repuestos-card">
+        <img src="img/3.png" alt="Pantallas LED">
+        <div>
+          <h3>Pantallas LED, Slim y Nano</h3>
+          <p>Reemplazo de pantallas dañadas, Full HD y Gamer.</p>
         </div>
+      </div>
 
-
-        <!-- TECLADOS -->
-
-        <div class="repuestos-card">
-
-            <img src="img/tecla.png" alt="Teclados">
-
-            <div>
-
-                <h3>Teclados</h3>
-
-                <p>
-                    Teclados retroiluminados y estándar
-                    para notebooks.
-                </p>
-
-            </div>
-
+      <!-- TECLADOS -->
+      <div class="repuestos-card">
+        <img src="img/tecla.png" alt="Teclados">
+        <div>
+          <h3>Teclados</h3>
+          <p>Teclados retroiluminados y estándar para notebooks.</p>
         </div>
+      </div>
 
-
-        <!-- CARGADORES -->
-
-        <div class="repuestos-card">
-
-            <img src="img/cag.png" alt="Cargadores">
-
-            <div>
-
-                <h3>Cargadores</h3>
-
-                <p>
-                    Cargadores originales y alternativos
-                    para notebook en general.
-                </p>
-
-            </div>
+      <!-- CARGADORES -->
+      <div class="repuestos-card">
+        <img src="img/cag.png" alt="Cargadores">
+        <div>
+          <h3>Cargadores</h3>
+          <p>Cargadores originales y alternativos para notebook en general.</p>
         </div>
-            
-            <section class="cta-repuestos">
+      </div>
 
-    <h2>¿Necesitas un Repuesto específico?</h2>
+      <!-- CTA dentro del grid para ocupar ancho completo -->
+      <div class="cta-repuestos">
+        <h2>¿Necesitas un Repuesto específico?</h2>
+        <p>
+          Con más de 16 años de experiencia en notebook corporativos multimarcas,
+          notebook normales y Gamer. Consulta disponibilidad y compatibilidad.
+        </p>
+        <a href="index.html#contactos" class="btn-primary">Consultar Ahora</a>
+      </div>
 
-    <p> Con mas de 16 Años de experiencia en notebook corporativos multimarcas, notebook normales y Gamer consulta disponibilidad y compatibilidad.
-    </p>
-       
+    </div>
+  </section>
 
-    <a href="index.html#contactos" class="btn-primary"> Consulte Ahora
-    </a>
-
- 
-</section>
-<footer class="footer">
-<p>© 2026 Todos los derechos reservados</p>
-</footer>
+  <footer class="footer">
+    <p>© 2026 NOTESYSTEM — Todos los derechos reservados</p>
+  </footer>
 
 </body>
 </html>
+
